@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercado Engineering Group | Electrical Design & Solar in Puerto Rico</title>
+  <meta name="description" content="Electrical designs, net metering due diligence, and solar installation services for homes and businesses in Puerto Rico." />
+  <style>
+    :root { --accent:#0A7CFF; --text:#222; --muted:#666; --bg:#fff; --light:#f5f7fb; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+    header{background:linear-gradient(135deg,#0A7CFF,#4CC9F0);color:#fff}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{font-weight:700;font-size:1.1rem;letter-spacing:.2px}
+    .cta{background:#fff;color:#0A7CFF;border:0;padding:10px 14px;border-radius:8px;font-weight:600}
+    .hero{padding:48px 0 28px}
+    .hero h1{font-size:2rem;margin:0 0 12px}
+    .hero p{max-width:720px;margin:0 0 20px;color:#eef}
+    .btn{display:inline-block;background:#fff;color:#0A7CFF;padding:12px 16px;border-radius:10px;font-weight:700}
+    section{padding:36px 0}
+    .grid{display:grid;gap:20px}
+    @media(min-width:760px){ .grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)} .hero h1{font-size:2.6rem} }
+    .card{background:var(--light);border:1px solid #e7ecf3;border-radius:12px;padding:18px}
+    .card h3{margin:0 0 8px}
+    .list{list-style:none;padding:0;margin:0}
+    .list li{margin:8px 0}
+    .list strong{display:inline-block;min-width:160px;color:#000}
+    .badge{display:inline-block;background:#e7f3ff;color:#0A7CFF;border:1px solid #cfe6ff;padding:6px 10px;border-radius:999px;font-size:.9rem;margin:6px 6px 0 0}
+    .muted{color:var(--muted)}
+    footer{background:#0d1b2a;color:#cfe0ff}
+    .footer-grid{display:grid;gap:18px}
+    @media(min-width:760px){ .footer-grid{grid-template-columns:2fr 1fr 1fr} }
+    .small{font-size:.95rem}
+    .table{width:100%;border-collapse:collapse;margin-top:8px}
+    .table th,.table td{border:1px solid #e7ecf3;padding:10px;text-align:left}
+    .table th{background:#f8fbff}
+    .note{font-size:.9rem;color:#667}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Mercado Engineering Group</div>
+      <a class="cta" href="#contact">Request a proposal</a>
+    </div>
+    <div class="wrap hero">
+      <h1>Electrical design, net metering due diligence, and solar installation in Puerto Rico</h1>
+      <p>We deliver compliant, efficient designs and turnkey solar solutions for residential, commercial, and industrial clients—aligned with local utility requirements and best practices to reduce risk and accelerate approvals.</p>
+      <a class="btn" href="#services">Explore services</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="wrap">
+      <h2>Services</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Electrical design</h3>
+          <ul class="list">
+            <li><strong>Scope:</strong> Load calculations, one‑line diagrams, panel schedules</li>
+            <li><strong>Deliverables:</strong> Stamped drawings, spec sheets, coordination notes</li>
+            <li><strong>Compliance:</strong> NEC‑aligned designs and local utility submittal formatting</li>
+            <li><strong>Value:</strong> Clear documentation that speeds review and reduces change orders</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Net metering due diligence</h3>
+          <ul class="list">
+            <li><strong>Assessment:</strong> Site and interconnection feasibility review</li>
+            <li><strong>Documentation:</strong> Application packet preparation and checklist support</li>
+            <li><strong>Risk review:</strong> Capacity, metering, and tariff considerations</li>
+            <li><strong>Outcome:</strong> Streamlined approvals and fewer resubmittals</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Solar installation</h3>
+          <ul class="list">
+            <li><strong>Design‑build:</strong> PV layout, racking, inverters, monitoring</li>
+            <li><strong>Integration:</strong> Battery options and smart energy management</li>
+            <li><strong>Commissioning:</strong> Testing, documentation, owner training</li>
+            <li><strong>Support:</strong> Warranty coordination and performance checks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="wrap">
+      <h2>Our process</h2>
+      <div class="grid grid-4">
+        <div class="card"><h3>1. Discovery</h3><p class="small">Goals, loads, site, and utility context.</p></div>
+        <div class="card"><h3>2. Design</h3><p class="small">Engineered drawings and specifications.</p></div>
+        <div class="card"><h3>3. Approvals</h3><p class="small">Submittals and net metering documentation.</p></div>
+        <div class="card"><h3>4. Build</h3><p class="small">Installation, testing, and commissioning.</p></div>
+      </div>
+      <p class="note">We provide clear checklists, timelines, and progress updates throughout your project.</p>
+    </section>
+
+    <section id="benefits" class="wrap">
+      <h2>Why Mercado Engineering Group</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Compliance and clarity</h3>
+          <ul class="list">
+            <li><strong>Standards:</strong> Designs aligned with applicable codes and utility guidance</li>
+            <li><strong>Documentation:</strong> Organized submittals that reduce review cycles</li>
+            <li><strong>Transparency:</strong> Fixed‑scope proposals with milestones</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Performance and value</h3>
+          <ul class="list">
+            <li><strong>Optimization:</strong> Systems sized for real‑world loads and tariffs</li>
+            <li><strong>Reliability:</strong> Quality hardware and proven installation practices</li>
+            <li><strong>Support:</strong> Post‑install monitoring and warranty coordination</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="wrap">
+      <h2>Selected projects</h2>
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Client</th><th>Type</th><th>Scope</th><th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Residential – Guaynabo</td><td>PV + battery</td><td>Design, net metering, installation</td><td>Utility approved; 40% bill reduction</td></tr>
+            <tr><td>Commercial – Bayamón</td><td>PV rooftop</td><td>Electrical design, interconnection package</td><td>On‑schedule approval; ROI < 5 years</td></tr>
+            <tr><td>Industrial – Caguas</td><td>Load study</td><td>Panel upgrades, one‑line, submittals</td><td>Capacity increase with minimal downtime</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted small">References and detailed case studies available upon request.</p>
+    </section>
+
+    <section id="credentials" class="wrap">
+      <h2>Licensing and credentials</h2>
+      <div class="grid grid-3">
+        <span class="badge">Professional engineering practice</span>
+        <span class="badge">Electrical code–aligned designs</span>
+        <span class="badge">Documented commissioning protocols</span>
+      </div>
+      <p class="muted small">We maintain comprehensive project records and provide compliance‑ready documentation for reviews.</p>
+    </section>
+
+    <section id="contact" class="wrap">
+      <h2>Request a proposal</h2>
+      <div class="card">
+        <p>Tell us about your project and we’ll respond with a scoped proposal and timeline.</p>
+        <ul class="list">
+          <li><strong>Email:</strong> info@mercadoengineering.com</li>
+          <li><strong>Phone:</strong> +1 (787) 555‑0100</li>
+          <li><strong>Office:</strong> Guaynabo, Puerto Rico</li>
+        </ul>
+        <p class="muted small">Include your address, utility account (if available), and any existing drawings or photos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid" style="padding:28px 0">
+      <div>
+        <div class="brand">Mercado Engineering Group</div>
+        <p class="small">Electrical design, net metering due diligence, and solar installation across Puerto Rico.</p>
+      </div>
+      <div>
+        <h3 class="small">Links</h3>
+        <ul class="list">
+          <li><strong>Services:</strong> <a href="#services">What we do</a></li>
+          <li><strong>Projects:</strong> <a href="#projects">Selected work</a></li>
+          <li><strong>Contact:</strong> <a href="#contact">Proposal request</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="small">Follow</h3>
+        <ul class="list">
+          <li><strong>LinkedIn:</strong> <a href="#">Company page</a></li>
+          <li><strong>Facebook:</strong> <a href="#">@MercadoEngineeringPR</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
