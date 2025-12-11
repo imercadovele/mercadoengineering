@@ -32,7 +32,7 @@
     header {
       background: url('solarsplash.png') center/cover no-repeat;
       color:#fff;
-      padding:8px 20px; /* compact header */
+      padding:8px 20px;
       text-align:center;
       position:relative;
     }
@@ -98,13 +98,13 @@
     }
     button:hover { background:#004C4F }
 
-    /* Two-column layout */
+    /* Two-column layout with narrower left column */
     .columns {
       display:grid;
       gap:32px;
     }
     @media(min-width:900px){
-      .columns { grid-template-columns:1fr 1fr }
+      .columns { grid-template-columns:0.4fr 0.6fr } /* left narrower */
     }
 
     .note { font-size:.9rem; color:var(--muted) }
@@ -228,5 +228,4 @@
               <option value="qcells-q-tron">Q.TRON</option>
               <option value="qcells-duo">DUO Series</option>
             </optgroup>
-            <optgroup label="JA Solar">
-              <option value="ja-deep
+            <optgroup label="
