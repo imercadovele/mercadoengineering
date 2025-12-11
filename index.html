@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mercado Engineering Group | Electrical Design & Solar in Puerto Rico</title>
-  <meta name="description" content="Electrical designs, net metering due diligence, and solar installation services for homes and businesses in Puerto Rico." />
+  <title>Net Metering Request | Mercado Engineering Group</title>
+  <meta name="description" content="Submit your details to start the net metering due diligence process with Mercado Engineering Group." />
   <style>
     :root {
-      --accent:#006D77;       /* teal */
-      --accent-light:#83C5BE; /* greenish teal */
-      --text:#1F2937;         /* dark slate */
-      --muted:#6B7280;        /* gray */
-      --bg:#F9FAFB;           /* off-white background */
-      --light:#FFFFFF;        /* card background */
+      --accent:#006D77;
+      --accent-light:#83C5BE;
+      --text:#1F2937;
+      --muted:#6B7280;
+      --bg:#F9FAFB;
+      --light:#FFFFFF;
     }
 
     * { box-sizing:border-box }
@@ -29,11 +29,10 @@
 
     .wrap { max-width:1080px; margin:0 auto; padding:0 20px }
 
-    /* Header with background image */
     header {
       background: url('solarsplash.png') center/cover no-repeat;
       color:#fff;
-      padding:80px 20px;
+      padding:16px 20px;
       text-align:center;
       position:relative;
     }
@@ -41,50 +40,23 @@
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(0,109,119,0.55); /* teal overlay */
+      background:rgba(0,109,119,0.55);
       z-index:0;
     }
-    header .wrap, header h1, header p, header a { position:relative; z-index:1 }
+    header .wrap, header h1, header p { position:relative; z-index:1 }
 
-    .nav {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:16px 0;
+    h1 {
+      font-size:1.8rem;
+      margin:0 0 8px;
     }
-    .brand { font-weight:700; font-size:1.2rem; letter-spacing:.3px }
-    .cta {
-      background:#fff;
-      color:var(--accent);
-      border:0;
-      padding:10px 16px;
-      border-radius:8px;
-      font-weight:600;
-      transition:background 0.3s ease;
+    p {
+      max-width:640px;
+      margin:0 auto 16px;
     }
-    .cta:hover { background:var(--accent-light); color:#fff }
 
-    .hero { padding:60px 0 40px }
-    .hero h1 { font-size:2.4rem; margin:0 0 16px }
-    .hero p { max-width:720px; margin:0 auto 24px; color:#E0FBFC }
-
-    .btn {
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:12px 20px;
-      border-radius:8px;
-      font-weight:600;
-      transition:background 0.3s ease;
-    }
-    .btn:hover { background:#004C4F }
-
-    section { padding:48px 0 }
-    .grid { display:grid; gap:24px }
-    @media(min-width:760px){
-      .grid-3{grid-template-columns:repeat(3,1fr)}
-      .grid-2{grid-template-columns:repeat(2,1fr)}
-      .hero h1{font-size:2.8rem}
+    .hero {
+      text-align:center;
+      padding:8px 0 12px;
     }
 
     .card {
@@ -93,156 +65,158 @@
       padding:22px;
       box-shadow:0 2px 8px rgba(0,0,0,0.08);
     }
-    .card h3 { margin:0 0 10px }
+    .card h3 { margin-top:0 }
 
-    .list { list-style:none; padding:0; margin:0 }
-    .list li { margin:8px 0 }
-    .list strong { display:inline-block; min-width:160px; color:var(--text) }
-
-    .card-icon {
-      display: block;
-      width: 100%;
-      max-height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 12px;
-  }
-    .card-link {
-  text-decoration: none;   /* remove underline */
-  color: inherit;          /* keep text colors */
-  display: block;          /* makes the link behave like a block */
-}
-.card-link:hover .card {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle hover effect */
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-    .badge {
-      display:inline-block;
-      background:var(--accent-light);
-      color:#fff;
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:.9rem;
-      margin:6px 6px 0 0;
+    form {
+      display:grid;
+      gap:16px;
+    }
+    label { font-weight:600 }
+    input, textarea, select {
+      padding:10px;
+      border:1px solid #d1d5db;
+      border-radius:8px;
+      font-size:1rem;
+      width:100%;
     }
 
-    .muted { color:var(--muted) }
+    button {
+      background:var(--accent);
+      color:#fff;
+      border:none;
+      padding:12px 20px;
+      border-radius:8px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background 0.3s ease;
+    }
+    button:hover { background:#004C4F }
+
+    /* Two-column layout */
+    .columns {
+      display:grid;
+      gap:32px;
+    }
+    @media(min-width:900px){
+      .columns { grid-template-columns:1fr 1fr }
+    }
+
+    .note { font-size:.9rem; color:var(--muted) }
 
     footer {
       background:#0D1B2A;
       color:#E0FBFC;
+      padding:20px;
+      text-align:center;
+      margin-top:40px;
     }
-    .footer-grid { display:grid; gap:20px }
-    @media(min-width:760px){ .footer-grid{grid-template-columns:2fr 1fr 1fr} }
     footer a { color:var(--accent-light) }
     footer a:hover { color:#fff }
-
-    .small { font-size:.95rem }
-    .table {
-      width:100%;
-      border-collapse:collapse;
-      margin-top:10px;
-    }
-    .table th,.table td {
-      border:1px solid #e7ecf3;
-      padding:10px;
-      text-align:left;
-    }
-    .table th { background:#F9FAFB }
-    .note { font-size:.9rem; color:var(--muted) }
   </style>
 </head>
 <body>
- <header>
-  <div class="wrap">
-    <!-- Logo and CTA button row -->
-    <div class="nav" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
-      <img src="BWLogo.png" alt="MEGA Logo" style="width:325px; height:auto;">
-      <a class="cta" href="quote.html">Request a proposal</a>
+  <header>
+    <div class="wrap">
+      <div class="nav" style="display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
+        <img src="BWLogo.png" alt="MEGA Logo" style="width:280px; height:auto;">
+      </div>
+      <div class="hero">
+        <h1>Net Metering Request</h1>
+        <p>Provide your details to begin the net metering due diligence process.</p>
+      </div>
     </div>
+  </header>
 
-    <!-- Centered hero content with reduced spacing -->
-    <div class="hero" style="text-align:center; padding-top:0;">
-      <h1 style="margin-top:0;">Electrical design, net metering due diligence, and solar installation in Puerto Rico</h1>
-      <p>We deliver compliant, efficient designs and turnkey solar solutions for residential, commercial, and industrial clients—aligned with local utility requirements and best practices to reduce risk and accelerate approvals.</p>
-      <a class="btn" href="#services">Explore services</a>
-    </div>
-  </div>
-</header>
+  <main class="wrap">
+    <div class="columns">
+      <!-- Left column: Our Process -->
+      <section id="process">
+        <h2>Our Process</h2>
+        <div class="grid grid-4" style="display:grid; gap:16px;">
+          <div class="card">
+            <h3>1. Submit Your Request</h3>
+            <p class="small">Fill out the Net Metering or Electrical Design Request Form to get started.</p>
+          </div>
+          <div class="card">
+            <h3>2. Receive a Quote</h3>
+            <p class="small">We review your request and send a clear, detailed quote directly to your email.</p>
+          </div>
+          <div class="card">
+            <h3>3. Approval & Next Steps</h3>
+            <p class="small">Once you approve, we handle permits, compliance checks, and prepare the design or metering plan.</p>
+          </div>
+          <div class="card">
+            <h3>4. Project Delivery</h3>
+            <p class="small">We complete the installation or design package and provide all documentation for your records.</p>
+          </div>
+        </div>
+        <p class="note">
+          Throughout the process, we provide clear checklists, timelines, and progress updates so you always know what to expect.
+        </p>
+      </section>
 
-  <main>
-    <section id="services" class="wrap">
-  <h2>Services</h2>
-  <div class="grid grid-3">
-    <div class="card">
-      <img src="Design.jpg" alt="Electrical Design icon" class="card-icon" />
-      <h3>Electrical Design</h3>
-      <ul class="list">
-        <li><strong>Load analysis:</strong> Accurate calculations for safe, efficient systems</li>
-        <li><strong>Plans & permits:</strong> NEC‑aligned drawings ready for utility and municipal review</li>
-        <li><strong>Documentation:</strong> Clear packages that accelerate approvals and reduce change orders</li>
-        <li><strong>Value:</strong> Compliance‑ready designs that save time and minimize risk</li>
-      </ul>
-    </div>
-    <a href="netmetering.html" class="card-link"> 
+      <!-- Right column: Form -->
       <div class="card">
-       <img src="Netmetering.jpg" alt="Net Metering icon" class="card-icon" />
-      <h3>Net Metering Due Diligence</h3>
-      <ul class="list">
-        <li><strong>Feasibility review:</strong> Site and interconnection capacity assessment</li>
-        <li><strong>Utility coordination:</strong> Complete application packets and checklist support</li>
-        <li><strong>Larger Systems (>25kW):</strong> Full net metering process support, including systems over 25 kW with utility coordination</li>
-        <li><strong>Outcome:</strong> Faster approvals with fewer resubmittals</li>
-      </ul>
-    </div>
-    </a>
-    <div class="card">
-       <img src="Solar.jpg" alt="Solar Installation icon" class="card-icon" />
-      <h3>Solar Installation</h3>
-      <ul class="list">
-        <li><strong>Design‑build:</strong> PV layout, racking, inverters, and monitoring systems</li>
-        <li><strong>Integration:</strong> Battery storage and smart energy management options</li>
-        <li><strong>Commissioning:</strong> Testing, inspections, and owner training for long‑term reliability</li>
-        <li><strong>Support:</strong> Warranty coordination and ongoing performance checks</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <form action="https://formspree.io/f/xqarlprl" method="post">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
 
-   <section id="process" class="wrap">
-  <h2>Our Process</h2>
-  <div class="grid grid-4">
-    <div class="card">
-      <h3>1. Submit Your Request</h3>
-      <p class="small">Fill out the Net Metering or Electrical Design Request Form to get started.</p>
-    </div>
-    <div class="card">
-      <h3>2. Receive a Quote</h3>
-      <p class="small">We review your request and send a clear, detailed quote directly to your email.</p>
-    </div>
-    <div class="card">
-      <h3>3. Approval & Next Steps</h3>
-      <p class="small">Once you approve, we handle permits, compliance checks, and prepare the design or metering plan.</p>
-    </div>
-    <div class="card">
-      <h3>4. Project Delivery</h3>
-      <p class="small">We complete the installation or design package and provide all documentation for your records.</p>
-    </div>
-  </div>
-  <p class="note">
-    Throughout the process, we provide clear checklists, timelines, and progress updates so you always know what to expect.
-  </p>
-</section>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
 
-    <section id="benefits" class="wrap">
-      <h2>Why Mercado Engineering Group</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Compliance and clarity</h3>
-          <ul class="list">
-            <li><strong>Standards:</strong> Designs aligned with applicable codes and utility guidance</li>
-            <li><strong>Documentation:</strong> Organized submittals that reduce review cycles</li>
-            <li><strong>Transparency:</strong> Fixed‑scope proposals with milestones</li>
-          </ul>
-        </div
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="address">Project Address</label>
+          <input type="text" id="address" name="address" />
+
+          <label for="Size">Project Size (kW)</label>
+          <input type="text" id="Size" name="Size" />
+
+          <label for="Inverter">Inverter</label>
+          <select id="Inverter" name="Inverter" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="EG4 18KPV">EG4 18KPV</option>
+            <option value="EG4 GridBoss 21">EG4 GridBoss 21</option>
+            <option value="EG4 GridBoss 16">EG4 GridBoss 16</option>
+            <option value="Sol-Ark 15">Sol-Ark 15</option>
+            <option value="Sol-Ark 12">Sol-Ark 12</option>
+            <option value="Other specify on notes">Other specify on notes</option>
+          </select>
+
+          <label for="panelBrand">Preferred Solar Panel Brand & Model</label>
+          <select id="panelBrand" name="panelBrand" required>
+            <option value="">-- Please choose an option --</option>
+            <optgroup label="SunPower / Maxeon">
+              <option value="maxeon-6">Maxeon 6</option>
+              <option value="maxeon-7">Maxeon 7</option>
+            </optgroup>
+            <optgroup label="REC Group">
+              <option value="rec-alpha-pure">REC Alpha Pure</option>
+              <option value="rec-alpha-pure-r">REC Alpha Pure-R</option>
+            </optgroup>
+            <optgroup label="Canadian Solar">
+              <option value="cs-hihero">HiHero</option>
+              <option value="cs-topcon">TOPCon Series</option>
+              <option value="cs-bifacial">Bifacial Series</option>
+            </optgroup>
+            <optgroup label="Jinko Solar">
+              <option value="jinko-tiger-neo">Tiger Neo</option>
+              <option value="jinko-tiger-pro">Tiger Pro</option>
+            </optgroup>
+            <optgroup label="Trina Solar">
+              <option value="trina-vertex-s">Vertex S</option>
+              <option value="trina-vertex-n">Vertex N</option>
+            </optgroup>
+            <optgroup label="LONGi Solar">
+              <option value="longi-hi-mo-6">Hi-MO 6</option>
+              <option value="longi-hi-mo-7">Hi-MO 7</option>
+            </optgroup>
+            <optgroup label="Panasonic">
+              <option value="panasonic-evervolt">EverVolt</option>
+            </optgroup>
+            <optgroup label="Q CELLS">
+              <option value="qcells-q-tron">Q.TRON</option>
+              <option value="qcells-duo">DUO Series</option>
+            </optgroup>
+            <optgroup label="JA
