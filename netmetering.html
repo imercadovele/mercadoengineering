@@ -32,7 +32,7 @@
     header {
       background: url('solarsplash.png') center/cover no-repeat;
       color:#fff;
-      padding:10px 20px;
+      padding:8px 20px; /* compact header */
       text-align:center;
       position:relative;
     }
@@ -43,20 +43,26 @@
       background:rgba(0,109,119,0.55);
       z-index:0;
     }
-    header .wrap, header h1, header p { position:relative; z-index:1 }
+    header .wrap { position:relative; z-index:1 }
 
-    h1 {
+    .nav {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:20px;
+    }
+    .nav img {
+      width:120px;
+      height:auto;
+    }
+    .nav h1 {
+      margin:0;
       font-size:1.8rem;
-      margin:0 0 8px;
+      color:#fff;
     }
-    p {
-      max-width:640px;
-      margin:0 auto 16px;
-    }
-
-    .hero {
-      text-align:center;
-      padding:4px 0 8px;
+    .hero p {
+      color:#fff;
+      margin:6px 0 0;
     }
 
     .card {
@@ -117,11 +123,14 @@
 <body>
   <header>
     <div class="wrap">
-      <div class="nav" style="display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
-        <img src="BWLogo.png" alt="MEGA Logo" style="width:280px; height:auto;">
+      <div class="nav">
+        <!-- Logo on the left -->
+        <img src="BWLogo.png" alt="MEGA Logo">
+
+        <!-- Centered header text -->
+        <h1>Net Metering Request</h1>
       </div>
       <div class="hero">
-        <h1>Net Metering Request</h1>
         <p>Provide your details to begin the net metering due diligence process.</p>
       </div>
     </div>
@@ -219,4 +228,5 @@
               <option value="qcells-q-tron">Q.TRON</option>
               <option value="qcells-duo">DUO Series</option>
             </optgroup>
-            <optgroup label="JA
+            <optgroup label="JA Solar">
+              <option value="ja-deep
