@@ -7,12 +7,12 @@
   <meta name="description" content="Submit your details to start the net metering due diligence process with Mercado Engineering Group." />
   <style>
     :root {
-      --accent:#006D77;       /* teal */
-      --accent-light:#83C5BE; /* greenish teal */
-      --text:#1F2937;         /* dark slate */
-      --muted:#6B7280;        /* gray */
-      --bg:#F9FAFB;           /* off-white background */
-      --light:#FFFFFF;        /* card background */
+      --accent:#006D77;
+      --accent-light:#83C5BE;
+      --text:#1F2937;
+      --muted:#6B7280;
+      --bg:#F9FAFB;
+      --light:#FFFFFF;
     }
 
     * { box-sizing:border-box }
@@ -29,11 +29,10 @@
 
     .wrap { max-width:720px; margin:0 auto; padding:0 20px }
 
-    /* Header with background image */
     header {
       background: url('solarsplash.png') center/cover no-repeat;
       color:#fff;
-      padding:30px 20px;
+      padding:16px 20px;
       text-align:center;
       position:relative;
     }
@@ -41,13 +40,24 @@
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(0,109,119,0.55); /* teal overlay */
+      background:rgba(0,109,119,0.55);
       z-index:0;
     }
     header .wrap, header h1, header p { position:relative; z-index:1 }
 
-    h1 { font-size:2rem; margin:0 0 12px }
-    p { max-width:640px; margin:0 auto 20px }
+    h1 {
+      font-size:1.8rem;
+      margin:0 0 8px;
+    }
+    p {
+      max-width:640px;
+      margin:0 auto 16px;
+    }
+
+    .hero {
+      text-align:center;
+      padding:8px 0 12px;
+    }
 
     .card {
       background:var(--light);
@@ -56,20 +66,7 @@
       box-shadow:0 2px 8px rgba(0,0,0,0.08);
       margin-top:32px;
     }
-select {
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
-}
-    input[type="number"] {
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
-}
+
     form {
       display:grid;
       gap:16px;
@@ -77,13 +74,17 @@ select {
     label {
       font-weight:600;
     }
-    input, textarea {
+    input, textarea, select {
       padding:10px;
       border:1px solid #d1d5db;
       border-radius:8px;
       font-size:1rem;
       width:100%;
     }
+    input[type="number"] {
+      min-width:0;
+    }
+
     button {
       background:var(--accent);
       color:#fff;
@@ -111,142 +112,98 @@ select {
 </head>
 <body>
   <header>
-  <div class="wrap">
-    <!-- Logo and CTA button row -->
-    <div class="nav" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
-      <img src="BWLogo.png" alt="MEGA Logo" style="width:325px; height:auto;">
+    <div class="wrap">
+      <div class="nav" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+        <img src="BWLogo.png" alt="MEGA Logo" style="width:280px; height:auto;">
+      </div>
+      <div class="hero">
+        <h1>Net Metering Request</h1>
+        <p>Provide your details to begin the net metering due diligence process.</p>
+      </div>
     </div>
-    <!-- Centered hero content with reduced spacing -->
-    <div class="hero" style="text-align:center; padding-top:0;">
-       <h1>Net Metering Request</h1>
-      <p>Provide your details to begin the net metering due diligence process.</p>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <main class="wrap">
     <div class="card">
       <form action="https://formspree.io/f/xqarlprl" method="post">
-        <div>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
 
-        <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
 
-        <div>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
 
-        <div>
-          <label for="address">Project Address</label>
-          <input type="text" id="address" name="address" />
-        </div>
-<div>
-          <label for="Project Size in KW">Project Size</label>
-          <input type="text" id="Size" name="Size" />
-        </div>
-      <div>
-  <label for="Inverter">Inverter</label>
-  <select id="Inverter" name="Inverter" required>
-    <option value="">-- Please choose an option --</option>
-    <option value="EG4 18KPV">EG418KPV</option>
-    <option value="EG4 GridBoss 21">EG4 GridBoss 21</option>
-    <option value="EG4 GridBoss 16">EG4 GridBoss 16</option>
-    <option value="Sol-Ark 15">Sol-Ark 15</option>
-    <option value="Sol-Ark 12">Sol-Ark 12</option>
-    <option value="Other specify on notes">Other specify on notes</option>
-  </select>
-</div>
-        <div>
-  <label for="panelBrand">Preferred Solar Panel Brand & Model</label>
-  <select id="panelBrand" name="panelBrand" required>
-    <option value="">-- Please choose an option --</option>
-    
-    <optgroup label="SunPower / Maxeon">
-      <option value="maxeon-6">Maxeon 6</option>
-      <option value="maxeon-7">Maxeon 7</option>
-    </optgroup>
-    
-    <optgroup label="REC Group">
-      <option value="rec-alpha-pure">REC Alpha Pure</option>
-      <option value="rec-alpha-pure-r">REC Alpha Pure-R</option>
-    </optgroup>
-    
-    <optgroup label="Canadian Solar">
-      <option value="cs-hihero">HiHero</option>
-      <option value="cs-topcon">TOPCon Series</option>
-      <option value="cs-bifacial">Bifacial Series</option>
-    </optgroup>
-    
-    <optgroup label="Jinko Solar">
-      <option value="jinko-tiger-neo">Tiger Neo</option>
-      <option value="jinko-tiger-pro">Tiger Pro</option>
-    </optgroup>
-    
-    <optgroup label="Trina Solar">
-      <option value="trina-vertex-s">Vertex S</option>
-      <option value="trina-vertex-n">Vertex N</option>
-    </optgroup>
-    
-    <optgroup label="LONGi Solar">
-      <option value="longi-hi-mo-6">Hi-MO 6</option>
-      <option value="longi-hi-mo-7">Hi-MO 7</option>
-    </optgroup>
-    
-    <optgroup label="Panasonic">
-      <option value="panasonic-evervolt">EverVolt</option>
-    </optgroup>
-    
-    <optgroup label="Q CELLS">
-      <option value="qcells-q-tron">Q.TRON</option>
-      <option value="qcells-duo">DUO Series</option>
-    </optgroup>
-    
-    <optgroup label="JA Solar">
-      <option value="ja-deepblue-4">DeepBlue 4.0</option>
-    </optgroup>
-    
-    <optgroup label="First Solar">
-      <option value="firstsolar-series6">Series 6 Thin Film</option>
-    </optgroup>
-    
-    <option value="other">Other (please specify in notes)</option>
-  </select>
-</div>
-        <div>
-  <label for="panelQuantity">Number of Solar Panels</label>
-  <input 
-    type="number" 
-    id="panelQuantity" 
-    name="panelQuantity" 
-    min="1" 
-    max="200" 
-    step="1" 
-    required 
-  />
-</div>
-        <div>
-  <label for="panelSize">Solar Panel Size (Watts)</label>
-  <input 
-    type="number" 
-    id="panelSize" 
-    name="panelSize" 
-    min="200" 
-    max="999" 
-    step="1" 
-    required 
-  />
-</div>
-        <div>
-          <label for="message">Additional Notes</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
+        <label for="address">Project Address</label>
+        <input type="text" id="address" name="address" />
+
+        <label for="Size">Project Size (kW)</label>
+        <input type="text" id="Size" name="Size" />
+
+        <label for="Inverter">Inverter</label>
+        <select id="Inverter" name="Inverter" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="EG4 18KPV">EG4 18KPV</option>
+          <option value="EG4 GridBoss 21">EG4 GridBoss 21</option>
+          <option value="EG4 GridBoss 16">EG4 GridBoss 16</option>
+          <option value="Sol-Ark 15">Sol-Ark 15</option>
+          <option value="Sol-Ark 12">Sol-Ark 12</option>
+          <option value="Other specify on notes">Other specify on notes</option>
+        </select>
+
+        <label for="panelBrand">Preferred Solar Panel Brand & Model</label>
+        <select id="panelBrand" name="panelBrand" required>
+          <option value="">-- Please choose an option --</option>
+          <optgroup label="SunPower / Maxeon">
+            <option value="maxeon-6">Maxeon 6</option>
+            <option value="maxeon-7">Maxeon 7</option>
+          </optgroup>
+          <optgroup label="REC Group">
+            <option value="rec-alpha-pure">REC Alpha Pure</option>
+            <option value="rec-alpha-pure-r">REC Alpha Pure-R</option>
+          </optgroup>
+          <optgroup label="Canadian Solar">
+            <option value="cs-hihero">HiHero</option>
+            <option value="cs-topcon">TOPCon Series</option>
+            <option value="cs-bifacial">Bifacial Series</option>
+          </optgroup>
+          <optgroup label="Jinko Solar">
+            <option value="jinko-tiger-neo">Tiger Neo</option>
+            <option value="jinko-tiger-pro">Tiger Pro</option>
+          </optgroup>
+          <optgroup label="Trina Solar">
+            <option value="trina-vertex-s">Vertex S</option>
+            <option value="trina-vertex-n">Vertex N</option>
+          </optgroup>
+          <optgroup label="LONGi Solar">
+            <option value="longi-hi-mo-6">Hi-MO 6</option>
+            <option value="longi-hi-mo-7">Hi-MO 7</option>
+          </optgroup>
+          <optgroup label="Panasonic">
+            <option value="panasonic-evervolt">EverVolt</option>
+          </optgroup>
+          <optgroup label="Q CELLS">
+            <option value="qcells-q-tron">Q.TRON</option>
+            <option value="qcells-duo">DUO Series</option>
+          </optgroup>
+          <optgroup label="JA Solar">
+            <option value="ja-deepblue-4">DeepBlue 4.0</option>
+          </optgroup>
+          <optgroup label="First Solar">
+            <option value="firstsolar-series6">Series 6 Thin Film</option>
+          </optgroup>
+          <option value="other">Other (please specify in notes)</option>
+        </select>
+
+        <label for="panelQuantity">Number of Solar Panels</label>
+        <input type="number" id="panelQuantity" name="panelQuantity" min="1" max="200" step="1" required />
+
+        <label for="panelSize">Solar Panel Size (Watts)</label>
+        <input type="number" id="panelSize" name="panelSize" min="200" max="999" step="1" required />
+
+        <label for="message">Additional Notes</label>
+        <textarea id="message" name="message" rows="4"></textarea>
 
         <button type="submit">Submit Request</button>
       </form>
